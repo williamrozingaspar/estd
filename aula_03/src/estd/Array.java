@@ -6,9 +6,17 @@ public class Array {
 
 	Integer[] y;
 
-	public void sum() {
-		i = new int[5];
-		System.out.println(i[4]);
+	public String tirarX(String s) {
+		char[] chars = s.toCharArray();
+		
+		
+		String resultado = "";
+		resultado = resultado + x[j];
+		
+		return resultado;
 	}
+	
+	
+	
 
 }

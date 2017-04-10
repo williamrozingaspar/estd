@@ -8,12 +8,9 @@ public class EvenTest {
 	@Test
 	public void countEvensTest() {
 		Even even = new Even();
-		int[] nums = { 5, 6, 8, 4, 1, 9 };
-
+		int[] nums = { 1,2,3 };
 		int resultado = even.countEvens(nums);
-		
 		Assert.assertTrue(resultado == 2);
-		
 	}
 
 }

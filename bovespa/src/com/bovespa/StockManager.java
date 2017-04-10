@@ -16,7 +16,7 @@ public class StockManager {
 	public Stock[] loadStocks(String fileName) throws IOException {
 		Stream<String> lines = Files.lines(Paths.get(fileName));
 		Stock[] stocks = new Stock[(int) (lines.count() - 2)];
-
+		
 		lines = Files.lines(Paths.get(fileName));
 		lines.forEach(line -> {
 			if (line.startsWith("01")) {
