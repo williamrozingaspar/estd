@@ -5,6 +5,10 @@ public class Node<T> {
 	private  Node<T> next;
 	
 	private T value;
+	
+	public Node(T t) {
+		value = t;
+	}
 
 	public Node<T> getNext() {
 		return next;

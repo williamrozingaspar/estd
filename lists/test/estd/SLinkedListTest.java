@@ -9,12 +9,32 @@ public class SLinkedListTest {
 	public void getSizeTest() {
 		SLinkedList<String> linkedList = new SLinkedList<>();
 		Assert.assertTrue(linkedList.getSize() == 0);
+		Assert.assertTrue(linkedList.isEmpty());
 		
-		Node<String> node = new Node<>();
-		node.setValue("A");
-		linkedList.add(node);
-		Assert.assertTrue(linkedList.getSize() == 1);
-		
+		Node<String> nodeA = new Node<>("A");
+		Node<String> nodeB = new Node<>("B");
+		Node<String> nodeC = new Node<>("C");
+
+		linkedList.add(nodeA);
+		linkedList.add(nodeB);
+		linkedList.add(nodeC);
+
+		Assert.assertTrue(linkedList.getSize() == 3);
+		Assert.assertFalse(linkedList.isEmpty());
 		
 	}
+	
+	@Test
+	public void removeFirstTest() {
+		SLinkedList<String> linkedList = new SLinkedList<>();
+		Node<String> nodeA = new Node<>("A");
+		Node<String> nodeB = new Node<>("B");
+		Node<String> nodeC = new Node<>("C");
+
+		linkedList.add(nodeA);
+		linkedList.add(nodeB);
+		linkedList.add(nodeC);
+
+		
+	}	
 }
