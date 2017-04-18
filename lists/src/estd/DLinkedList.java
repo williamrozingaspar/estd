@@ -21,31 +21,31 @@ public class DLinkedList<T> {
 			}
 		}
 	}
-
+	
 	public void addFirst(DNode<T> dnode) {
 		if (isEmpty()) {
 			first = dnode;
 			last = dnode;
 		} else {
-			first.setPrevious(dnode);
+			first.setPrev(dnode);
 			dnode.setNext(first);
 			first = dnode;
 		}
 		size++;
 	}
-
+	
 	public void addLast(DNode<T> dnode) {
 		if (isEmpty()) {
 			first = dnode;
 			last = dnode;
 		} else {
 			last.setNext(dnode);
-			dnode.setPrevious(last);
+			dnode.setPrev(last);
 			last = dnode;
 		}
 		size++;
 	}
-
+	
 	public boolean isEmpty() {
 		return size == 0;
 	}

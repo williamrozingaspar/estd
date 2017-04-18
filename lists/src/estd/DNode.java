@@ -3,7 +3,8 @@ package estd;
 public class DNode<T> {
 
 	private  DNode<T> next;
-	private  DNode<T> previous;
+	
+	private  DNode<T> prev;
 	
 	private T value;
 	
@@ -15,16 +16,8 @@ public class DNode<T> {
 		return next;
 	}
 
-	public DNode<T> getPrevious() {
-		return previous;
-	}
-
 	public void setNext(DNode<T> next) {
 		this.next = next;
-	}
-
-	public void setPrevious(DNode<T> previous) {
-		this.previous = previous;
 	}
 
 	public T getValue() {
@@ -33,6 +26,14 @@ public class DNode<T> {
 
 	public void setValue(T value) {
 		this.value = value;
+	}
+
+	public DNode<T> getPrev() {
+		return prev;
+	}
+
+	public void setPrev(DNode<T> prev) {
+		this.prev = prev;
 	}
 	
 }
