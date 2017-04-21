@@ -47,18 +47,42 @@ public class SLinkedList<T> {
 	public int getNodeHeigth(Node<T> node) {
 		Node<T> aux = this.getFirst();
 		int i = -1;
-		boolean found = false;
-		
+
 		while (aux != null) {
-			if (aux.equals(node)) {
-				found = true;
-			}
-			if(found){
+			if (aux.equals(node) || i >= 0) {
 				i++;
 			}
 			aux = aux.getNext();
 		}
 		return i;
+	}
+
+	public int getNodeDepth(Node<T> node) {
+		Node<T> aux = this.getFirst();
+		int i = -1;
+		
+		while(aux != null) {
+			i++;
+			if(aux.equals(node)) {
+				return i;
+			}
+		}
+		
+		return i;
+	}
+
+	public boolean equals(SLinkedList<T> list) {
+		Node<T> auxA = this.getFirst();
+		Node<T> auxB = list.getFirst();
+		boolean isNodeEquals = this.getSize() == list.getSize();
+
+		while(isNodeEquals) {
+			isNodeEquals = auxA.equals(auxB);
+			auxA = auxA.getNext();
+			auxB = auxB.getNext();
+		}
+		
+		return isNodeEquals;
 	}
 
 	public boolean isEmpty() {

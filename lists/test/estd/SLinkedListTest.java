@@ -53,6 +53,7 @@ public class SLinkedListTest {
 		}
 	}	
 	
+	// Q1
 	@Test
 	public void searchValue() {
 		SLinkedList<String> linkedList = new SLinkedList<>();
@@ -68,6 +69,7 @@ public class SLinkedListTest {
 		Assert.assertNull(linkedList.search("Z"));
 	}
 	
+	// Q2
 	@Test
 	public void nodeHeight() {
 		SLinkedList<String> linkedList = new SLinkedList<>();
@@ -79,6 +81,41 @@ public class SLinkedListTest {
 		linkedList.add(nodeA);
 		linkedList.add(nodeB);
 		linkedList.add(nodeC);
-		Assert.assertEquals(-1, linkedList.getNodeHeigth(nodeD));
+		linkedList.add(nodeD);
+		Assert.assertEquals(3, linkedList.getNodeHeigth(nodeA));
+	}
+	
+	// Q3
+	@Test
+	public void nodeDepth() {
+		SLinkedList<String> linkedList = new SLinkedList<>();
+		Node<String> nodeA = new Node<>("A");
+		Node<String> nodeB = new Node<>("B");
+		Node<String> nodeC = new Node<>("C");
+		Node<String> nodeD = new Node<>("D");
+
+		linkedList.add(nodeA);
+		linkedList.add(nodeB);
+		linkedList.add(nodeC);
+		Assert.assertEquals(-1, linkedList.getNodeDepth(nodeD));
+	}
+	
+	// Q3
+	@Test
+	public void listEquals() {
+		SLinkedList<String> linkedList1 = new SLinkedList<>();
+		Node<String> nodeA = new Node<>("A");
+		Node<String> nodeB = new Node<>("B");
+
+		linkedList1.add(nodeA);
+		linkedList1.add(nodeB);
+
+		SLinkedList<String> linkedList2 = new SLinkedList<>();
+		Node<String> nodeC = new Node<>("C");
+		Node<String> nodeD = new Node<>("D");
+
+		linkedList2.add(nodeA);
+		linkedList2.add(nodeB);
+		Assert.assertTrue(linkedList1.equals(linkedList2));
 	}
 }
