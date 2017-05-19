@@ -1,4 +1,4 @@
-package estd;
+package q7;
 
 public class SLinkedList<T> {
 

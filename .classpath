@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="aula_03/src"/>
+	<classpathentry kind="src" path="aula_03/test"/>
+	<classpathentry kind="src" path="aula_04/src"/>
+	<classpathentry kind="src" path="aula_04/test"/>
+	<classpathentry kind="src" path="bovespa/src"/>
+	<classpathentry kind="src" path="bovespa/test"/>
+	<classpathentry kind="src" path="exercicio_01/src"/>
+	<classpathentry kind="src" path="exercicio_01/test"/>
+	<classpathentry kind="src" path="InsertionSort/src"/>
+	<classpathentry kind="src" path="InsertionSort/test"/>
+	<classpathentry kind="src" path="lists/src"/>
+	<classpathentry kind="src" path="lists/test"/>
+	<classpathentry kind="src" path="prova1a/src"/>
+	<classpathentry kind="src" path="prova1a/test"/>
+	<classpathentry kind="src" path="stack/src"/>
+	<classpathentry kind="src" path="stack/test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="aula_03/bin"/>
+</classpath>
