@@ -3,11 +3,17 @@ package stack;
 public class Q3 {
 
 	public int[] toArray (Stack<Integer> stack) {
-		/*
-		 * Implementar
-		 */
-		
-		return null;
+		int[] result = new int[stack.getSize()];
+		int i = 0;
+
+		while(!stack.isEmpty()) {
+			int aux = stack.pop();
+			if (aux % 2 == 0) {
+				result[i++] = aux;
+			}
+		}
+
+		return result;
 	}
 	
 }

@@ -78,10 +78,13 @@ public class ArrayStack<E> implements Stack<E> {
 
 	@Override
 	public List<E> clear() {
-		/*
-		 * Implementar
-		 */
-		return null;
+		List<E> list = new ArrayList<>();
+
+		while(!this.isEmpty()) {
+			list.add(this.pop());
+		}
+
+		return list;
 	}
 
 	@Override
