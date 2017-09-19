@@ -19,5 +19,4 @@ public interface Stack<E> {
 	List<E> clear();
 	
 	Stack<E> cloneStack();
-	
 }
